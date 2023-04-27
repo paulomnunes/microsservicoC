@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "06061b7a-c50c-4191-97a5-08d3fdbc3ad2",
+		"name": "Microsserviço C",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21910288"
+	},
+	"item": [
+		{
+			"name": "Rota padrão",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar evento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cpf\": \"577.436.760-64\",\r\n  \"ultimaConsulta\": \"2023-04-26\",\r\n  \"movimentacaoFinanceira\": 5000,\r\n  \"ultimaCompra\": \"2023-04-20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/evento",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"evento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retornar evento por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/evento/:cpf",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"evento",
+						":cpf"
+					],
+					"variable": [
+						{
+							"key": "cpf",
+							"value": "577.436.760-64"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:5000"
+		}
+	]
+}
