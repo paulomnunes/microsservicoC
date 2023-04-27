@@ -1,6 +1,6 @@
 # Microsserviço C
 
-Neste microsserviço, são acessadas três bases de dados externas (A, B e C) para consulta e processamento de informações.
+O Microsserviço C é um serviço de alto desempenho focado em gerenciar os últimos eventos relacionados a CPFs. Para garantir uma execução eficiente, o microsserviço utiliza o Redis, um banco de dados em memória extremamente rápido e escalável.
 
 ## Pré-requisitos
 
